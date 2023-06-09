@@ -1,0 +1,66 @@
+/* .section__head とコンパイルされる */
+.section {
+  &__head {
+    color: red;
+  }
+}
+
+/* .section > .section__head とコンパイルされる */
+.section {
+  & &__head {
+    color: blue;
+  }
+}
+
+/* body.en .section以下を包括してコンパイルされる */
+.section {
+  .head {
+    body.en & {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+/* プロパティをネストできる */
+.border-box {
+  border: {
+    width: 5px;
+    style: dotted;
+    color: black;
+    bottom: {
+      width: 10px;
+      style: solid;
+      color: yellow;
+    }
+    top: 2px solid 20px;
+    radius: 5px;
+  }
+}
+
+/* ルールセットの中で宣言した変数は記述以下ルールセット内まで適用される */
+$value: 100px;
+header {
+  //   /* $value = 100px */
+  margin-bottom: $value;
+  $value: 50px;
+  .logo {
+    // /* $value = 50px */
+    height: $value;
+  }
+}
+footer {
+  //   /* $value = 100px */
+  margin-top: $value;
+}
+
+/* 演 算 子 */
+.calc1 {
+  width: 500px + 16 / 2;
+}
+.calc2 {
+  width: 500px * 2;
+}
+.calc3 {
+  // 割り算だけは　（）が必要だが変数と一緒、または計算ってわかるのなら（）はいらない
+  width: (500px / 2);
+}

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* .section__head とコンパイルされる */
+.section__head {
+  color: red; }
+
+/* .section > .section__head とコンパイルされる */
+.section .section__head {
+  color: blue; }
+
+/* body.en .section以下を包括してコンパイルされる */
+body.en .section .head {
+  font-size: 1.8rem; }
+
+/* プロパティをネストできる */
+.border-box {
+  border-width: 5px;
+  border-style: dotted;
+  border-color: black;
+  border-bottom-width: 10px;
+  border-bottom-style: solid;
+  border-bottom-color: yellow;
+  border-top: 2px solid 20px;
+  border-radius: 5px; }
+
+/* ルールセットの中で宣言した変数は記述以下ルールセット内まで適用される */
+header {
+  margin-bottom: 100px; }
+  header .logo {
+    height: 50px; }
+
+footer {
+  margin-top: 100px; }
+
+/* 演 算 子 */
+.calc1 {
+  width: 508px; }
+
+.calc2 {
+  width: 1000px; }
+
+.calc3 {
+  width: 250px; }
