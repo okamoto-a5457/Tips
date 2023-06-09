@@ -1,0 +1,22 @@
+{
+  "name": "tips",
+  "version": "1.0.0",
+  "description": "個人的なフロントエンドTips",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/style.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okamoto-a5457/Tips.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/okamoto-a5457/Tips/issues"
+  },
+  "homepage": "https://github.com/okamoto-a5457/Tips#readme",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
